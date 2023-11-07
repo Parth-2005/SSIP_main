@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/students.css') }}">
+{% endblock %}
+
+{% block body %}
+<form id="registerForm" action="/create_course" method="post">
+  <h2>Course Registeration</h2>
+    <label for="username">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Course ID:</label>
+    <input type="text" id="courseID" name="courseID" required>
+    <button type="submit">Register</button>
+  </form>
+  {% endblock %}
